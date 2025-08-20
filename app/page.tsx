@@ -2,102 +2,130 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white text-black p-4 sm:p-6 md:p-8 max-w-4xl mx-auto">
+      {/* Newspaper Header */}
+      <header className="border-b-2 sm:border-b-4 border-black pb-2 sm:pb-4 mb-4 sm:mb-6">
+        <div className="text-center">
+          <h1
+            className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider mb-1 sm:mb-2"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            The Bachelorette Post
+          </h1>
+          <div
+            className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs sm:text-sm font-body gap-1 sm:gap-0"
+            style={{ fontFamily: "var(--font-crimson)" }}
+          >
+            <span>123 BROADWAY ST, NEW YORK CITY</span>
+            <span>OCTOBER 15, 2024 | $2.50</span>
+          </div>
+        </div>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Main Content */}
+      <main className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        {/* Left Column - Main Article */}
+        <div className="lg:col-span-2">
+          <h2
+            className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6"
+            style={{ fontFamily: "var(--font-playfair)" }}
           >
+            THE &ldquo;IT&rdquo; GIRL
+            <br />
+            IS GETTING MARRIED?
+          </h2>
+
+          {/* Main Image */}
+          <div className="mb-4 sm:mb-6">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/elegant-woman-formal-event.png"
+              alt="The &lsquo;It&rsquo; Girl at a formal event"
+              width={800}
+              height={600}
+              className="w-full h-auto border border-gray-300"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+
+          {/* Article Text */}
+          <div
+            className="font-body text-sm sm:text-base leading-relaxed space-y-3 sm:space-y-4"
+            style={{ fontFamily: "var(--font-crimson)" }}
           >
-            Read our docs
-          </a>
+            <p className="font-bold text-base sm:text-lg">THIS JUST IN:</p>
+
+            <p>
+              When Sophia, Our Fabulous Gal-pal Girl here, was asked about her
+              upcoming nuptials, she had this to say: &ldquo;It&rsquo;s Special Series was
+              the Wonderful with a ring on her finger. Whenever there comes a
+              time when you know, you know. And I know that this is the man I
+              want to spend the rest of my life with.&rdquo; The happy couple Prince
+              Charming after all.
+            </p>
+
+            <p>
+              You know what that means? It&rsquo;s time to Say I Do Miss Goodbye! The
+              girls are going on a weekend trip to celebrate. So you can take
+              notes. Pack your bags & get ready to party because this girl is
+              getting married! So grab I wonder what type of fun these girls
+              will get into, but I know it will be a night to remember and
+              they&rsquo;ll have the time of their lives.
+            </p>
+
+            <p className="font-bold">
+              YOU KNOW YOU LOVE ME, XOXO, GOSSIP GIRL ♡
+            </p>
+          </div>
+        </div>
+
+        {/* Right Column - Event Details */}
+        <div className="lg:col-span-1">
+          <div className="border-2 border-black p-3 sm:p-4 lg:p-6">
+            <h3
+              className="font-serif text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              EVENT DETAILS
+            </h3>
+
+            <div
+              className="font-body text-xs sm:text-sm leading-tight grid grid-cols-1 gap-2 sm:gap-3"
+              style={{ fontFamily: "var(--font-crimson)" }}
+            >
+              <div className="bg-gray-50 p-2 sm:p-3 border border-gray-200">
+                <div className="font-bold text-center mb-1 sm:mb-2">
+                  SATURDAY
+                </div>
+                <div className="text-xs sm:text-sm">
+                  • Breakfast & spa
+                  <br />• Pool party
+                  <br />• Dinner & speeches
+                  <br />• Dancing & festivities
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-2 sm:p-3 border border-gray-200">
+                <div className="font-bold text-center mb-1 sm:mb-2">SUNDAY</div>
+                <div className="text-xs sm:text-sm">
+                  • Brunch & beach
+                  <br />• Speeches
+                  <br />• Farewell & departure
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Image */}
+          <div className="mt-4 sm:mt-6">
+            <Image
+              src="/placeholder-7kbev.png"
+              alt="Group celebration photo"
+              width={400}
+              height={300}
+              className="w-full h-auto border border-gray-300"
+            />
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
